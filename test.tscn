@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ckv0pda31y8f8"]
+
+[node name="Label" type="Label"]
+offset_left = 541.0
+offset_top = 310.0
+offset_right = 617.0
+offset_bottom = 347.0
+text = "among us"
