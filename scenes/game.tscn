@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://6qy283t0kvrm"]
+
+[ext_resource type="Texture2D" uid="uid://ee3lo5ueldgc" path="res://assets/sprites/spr_form_placeholder.png" id="1_yaaxg"]
+[ext_resource type="Texture2D" uid="uid://hca0uym4wp6" path="res://assets/sprites/spr_filespanel_placeholder.png" id="2_01gml"]
+[ext_resource type="Texture2D" uid="uid://ko331umxpk6m" path="res://assets/sprites/spr_background_placeholder.png" id="2_nyhbq"]
+[ext_resource type="Texture2D" uid="uid://bomn8fqjnsoxs" path="res://assets/sprites/spr_passport_placeholder.png" id="4_46rxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvo36"]
+size = Vector2(300, 214)
+
+[node name="Game" type="Node2D"]
+
+[node name="SprBackgroundPlaceholder" type="Sprite2D" parent="."]
+texture = ExtResource("2_nyhbq")
+centered = false
+
+[node name="SprFilespanelPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(0, 395.51)
+texture = ExtResource("2_01gml")
+centered = false
+
+[node name="SprFormPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(281, 740)
+texture = ExtResource("1_yaaxg")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(764, 642)
+shape = SubResource("RectangleShape2D_xvo36")
+
+[node name="SprPassportPlaceholder" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D"]
+texture = ExtResource("4_46rxx")
